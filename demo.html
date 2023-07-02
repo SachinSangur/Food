@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <title>Using-Boot</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        label {
+            width: 200PX;
+            display: inline-block;
+            color: aliceblue;
+        }
+    </style>
+    <script>
+        function valid() {
+            console.log("valid function");
+            var name = document.getElementById('uname').value;
+            if (name.length >= 10) 
+            {
+                document.getElementById('msg').innerText = "Name must be 3-10 char";
+            } else {
+                document.getElementById('msg').innerText = "";
+                document.location = "./Home_T.html";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div style="text-align: center;
+            padding: 50px 50px 100px 50px;
+            border:5px inset white;
+            border-radius: 10px;
+            margin: 5% 70% 10% 2%;
+            position: fixed;
+            background-image: url(2.jpeg);
+            font-size:13px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <form style="text-align: left;">
+            <br><label style=" font-size:x-large; font-family: algerian;">L O G I N</label> <br> <br>
+            <label>User name:</label> <input type="text" id="uname" placeholder="Registered Email-Id" autofocus><br><br>
+            <label>Password:</label> <input type="password"><br><br>
+            <input type="button" value="Submit" class="btn btn-success" onclick="valid()">
+            <input type="reset" class="btn btn-danger"><br><br>
+            <p id="msg" style="color: red;"></p>
+            <i style="color:white; "> You are not registered </i> <a href="Register.html"
+                style="font-size: large; color: aliceblue;"><b>Click Here</b></a>
+        </form>
+    </div>
+    <img src="1.jpg" width="100%" height="100%">
+</body>
+
+</html>
